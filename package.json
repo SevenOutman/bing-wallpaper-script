@@ -1,0 +1,23 @@
+{
+  "name": "bing-wallpaper-script",
+  "version": "1.0.0",
+  "description": "Sets Bing image of day as your wallpaper.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SevenOutman/bing-wallpaper-script.git"
+  },
+  "author": "Doma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SevenOutman/bing-wallpaper-script/issues"
+  },
+  "homepage": "https://github.com/SevenOutman/bing-wallpaper-script#readme",
+  "dependencies": {
+    "request": "^2.81.0",
+    "wallpaper": "2.1.x"
+  }
+}
