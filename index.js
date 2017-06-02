@@ -16,6 +16,7 @@ const makeQueryByDate = date => {
     return `${y}${m}${d}`
 }
 const todayQuery = makeQueryByDate(today)
+console.log(`Date: ${todayQuery}`)
 const fileName = `downloads/${todayQuery}.jpg`
 // check if today's image exists
 if (fs.existsSync(fileName)) {
