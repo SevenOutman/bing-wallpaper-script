@@ -16,7 +16,7 @@ const makeQueryByDate = date => {
     return `${y}${m}${d}`
 }
 const todayQuery = makeQueryByDate(today)
-cnosole.log(`User: ${process.env.USER}`)
+console.log(`User: ${process.env.USER}`)
 console.log(`Date: ${todayQuery}`)
 const fileName = `downloads/${todayQuery}.jpg`
 // check if today's image exists
