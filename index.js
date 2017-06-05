@@ -31,7 +31,7 @@ if (fs.existsSync(fileName)) {
                 console.log(`Current wallpaper: ${imagePath}`);
             });
         } else {
-            console.log('Image already downloaded')
+            console.log('Image already downloaded at: ' + fullImagePath)
             wallpaper.set(fullImagePath).then(() => {
                 console.log('Set as wallpaper')
                 wallpaper.get().then(imagePath => {
