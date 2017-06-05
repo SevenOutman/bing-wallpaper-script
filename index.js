@@ -16,6 +16,7 @@ const makeQueryByDate = date => {
     return `${y}${m}${d}`
 }
 const todayQuery = makeQueryByDate(today)
+cnosole.log(`User: ${process.env.USER}`)
 console.log(`Date: ${todayQuery}`)
 const fileName = `downloads/${todayQuery}.jpg`
 // check if today's image exists
@@ -26,10 +27,16 @@ if (fs.existsSync(fileName)) {
     wallpaper.get().then(imagePath => {
         if (imagePath === fullImagePath) {
             console.log('Wallpaper up to date')
+            wallpaper.get().then(imagePath => {
+                console.log(`Current wallpaper: ${imagePath}`);
+            });
         } else {
             console.log('Image already downloaded')
             wallpaper.set(fullImagePath).then(() => {
                 console.log('Set as wallpaper')
+                wallpaper.get().then(imagePath => {
+                    console.log(`Current wallpaper: ${imagePath}`);
+                });
             })
         }
     });
